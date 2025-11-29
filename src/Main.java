@@ -5,7 +5,7 @@ import java.net.InetSocketAddress;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress(8090), 0);
 
         server.createContext("/", exchange -> {
             String response = "Hello World from Jenkins + Docker + Terraform EC2!";
@@ -18,6 +18,6 @@ public class Main {
         server.setExecutor(null);
         server.start();
 
-        System.out.println("🚀 Server started on port 8080");
+        System.out.println("🚀 Server started on port 8090");
     }
 }
